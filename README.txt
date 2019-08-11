@@ -12,3 +12,5 @@ Giới thiệu game:
 - Bạn sẽ thua nếu ko thể di chuyển các ô nữa (khi không ô nào có thể "combine" và không còn ô nào trống)
 
 - Bạn sẽ thắng nếu đạt được ô 2048
+
+- Đồ họa, và âm thanh game được làm bằng SFML
