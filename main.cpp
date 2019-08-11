@@ -409,14 +409,21 @@ int main() {
 	WinText.setFillColor(textColour);
 	WinText.setPosition(sf::Vector2f(103, 265));
 
+		// Tao bang diem
+	sf::Text scoreText(to_string(score), font, 15);
+	scoreText.setStyle(sf::Text::Regular);
+	scoreText.setFillColor(textColour);
+	sf::Text scoreDecoratorText("", font, 15);
+	scoreDecoratorText.setFillColor(textColour);
+
 	// Tao nut New Game
 	sf::Text NewGameText("Restart", font, 20);
 	NewGameText.setStyle(sf::Text::Regular);
 	NewGameText.setFillColor(textColour);
-	NewGameText.setPosition(sf::Vector2f(26, 60));
+	NewGameText.setPosition(sf::Vector2f(300,60));
 	sf::RectangleShape NewGameObject(sf::Vector2f(tileSize + 20, 35));
 	NewGameObject.setFillColor(sf::Color(255, 162, 0, 170));
-	NewGameObject.setPosition(sf::Vector2f(10, 55));
+	NewGameObject.setPosition(sf::Vector2f(284, 55));
 
 
 	// Tao title game
@@ -425,12 +432,7 @@ int main() {
 	titleText.setFillColor(textColour);
 	titleText.setPosition(sf::Vector2f(140, 0));
 
-	// Tao bang diem
-	sf::Text scoreText(to_string(score), font, 15);
-	scoreText.setStyle(sf::Text::Regular);
-	scoreText.setFillColor(textColour);
-	sf::Text scoreDecoratorText("", font, 15);
-	scoreDecoratorText.setFillColor(textColour);
+
 
 	// Thiet lap cho cac Tile
 	sf::RectangleShape gridTile(sf::Vector2f(tileSize, tileSize));
@@ -570,10 +572,10 @@ int main() {
 		}
 		// render bang diem
 		scoreDecoratorText.setString("highscore: " + to_string(highScore));
-		scoreDecoratorText.setPosition(sf::Vector2f(395 - scoreDecoratorText.getGlobalBounds().width, 72));
+		scoreDecoratorText.setPosition(sf::Vector2f(26, 72));
 		window.draw(scoreDecoratorText);
 		scoreDecoratorText.setString("score:        " + to_string(score));
-		scoreDecoratorText.setPosition(sf::Vector2f(scoreDecoratorText.getPosition().x , 57));
+		scoreDecoratorText.setPosition(sf::Vector2f(26 , 57));
 		window.draw(scoreDecoratorText);
 
 		// render game over
