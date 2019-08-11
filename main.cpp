@@ -194,7 +194,7 @@ void MoveDown(bool &tilesMoved)
 	for (int x = 0; x < 4; x++)
 	{
 		deque<int> cellList;
-		for (int y = 4; y > 0; y--)
+		for (int y = 3; y >= 0; y--)
 		{
 			if (Tile[x][y] != 0)
 			{
@@ -204,7 +204,7 @@ void MoveDown(bool &tilesMoved)
 		Combine(cellList);
 
 		int tileBefore;
-		for (int y = 4; y > 0; y--)
+		for (int y = 3; y >= 0; y--)
 		{
 			tileBefore = Tile[x][y];
 
@@ -311,7 +311,7 @@ void MoveRight(bool &tilesMoved)
 	for (int y = 0; y < 4; y++)
 	{
 		deque<int> cellList;
-		for (int x = 4; x > 0; x--)
+		for (int x = 3; x >= 0; x--)
 		{
 			if (Tile[x][y] != 0)
 			{
@@ -321,7 +321,7 @@ void MoveRight(bool &tilesMoved)
 		Combine(cellList);
 
 		int  tileBefore;
-		for (int x = 4; x > 0; x--)
+		for (int x = 3; x >= 0; x--)
 		{
 			tileBefore = Tile[x][y];
 
